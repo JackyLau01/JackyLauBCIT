@@ -10,7 +10,7 @@
 
     <body>
 
-        <img id="zombie" onclick="onKill()" src="images/PVZzombie.png"/>
+        <img id="zombie" onclick="onKill()" src="images/PVZzombie.PNG"/>
         <p id="score">Your score is: 0</p>
         <input type="button" value="Reset game" id='reset' onclick="forReset()">
         <audio id="kaboom" src="Explosion.mp3"></audio>
@@ -34,14 +34,14 @@
                 let axisy = Math.floor(Math.random()*(screenY - zombie.height));
                 document.getElementById('zombie').style.left=axisx+"px";
                 document.getElementById('zombie').style.top=axisy+"px";
-                document.getElementById('zombie').src="images/PVZzombie.png"
+                document.getElementById('zombie').src="images/PVZzombie.PNG"
             }
 
             document.getElementById('zombie').onload = setInterval(moveRandom, 2000);
 
             function onKill() {
                 if (canClick) {
-                document.getElementById('zombie').src = "images/explosion.png";
+                document.getElementById('zombie').src = "images/explosion.PNG";
                 document.getElementById("kaboom").play();
                 score++
                 document.getElementById('score').innerHTML = "Your score is: " + score
@@ -55,7 +55,7 @@
                 document.getElementById('score').innerHTML = "Your score is: " + 0
                 document.getElementById('zombie').style.left=(centerX - (zombie.width/2))+"px";
                 document.getElementById('zombie').style.top=(centerY - (zombie.height/2))+"px";
-                document.getElementById('zombie').src="images/PVZzombie.png"
+                document.getElementById('zombie').src="images/PVZzombie.PNG"
             }
 
             forReset()
